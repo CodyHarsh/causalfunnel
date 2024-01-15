@@ -1,0 +1,45 @@
+.timer {
+    --primary-color: #333; // Adjust to your theme's primary color
+    --accent-color: #f00; // Adjust to your theme's accent color
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #eee;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .timer__time {
+    color: var(--primary-color);
+    display: inline-block;
+    min-width: 40px;
+    text-align: center;
+  }
+  
+  .timer__colon {
+    margin: 0 5px;
+    color: var(--primary-color);
+  }
+  
+  .timer--countdown {
+    animation: countdown 30s linear;
+  }
+  
+  @keyframes countdown {
+    from {
+      color: var(--primary-color);
+    }
+    to {
+      color: var(--accent-color);
+    }
+  }
+  
+  .timer--expired {
+    background-color: var(--accent-color);
+    color: #fff;
+  }
+  

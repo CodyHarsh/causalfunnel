@@ -1,0 +1,31 @@
+.btn{
+    background-color: #fff;
+    color: #00291c;
+    font-weight: 100;
+    width: 100%;
+    border: 1px solid #00291c;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    transition: all .25s linear;
+}
+
+.btn:hover:not([disabled]){
+    background-color: #00291c;
+    color: #fff;
+}
+
+.correct{
+    background-color: #036444;
+    color: #fff;
+    border-color: #036444;
+}
+.incorrect{
+    background-color: #e36060;
+    color: #fff;
+    border-color: #e36060;
+}
