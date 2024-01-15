@@ -11,12 +11,14 @@ import { Route, Routes } from 'react-router-dom'
 import Answersheet from './components/Submission Page/Answersheet'
 import PageNotFound from './components/Error Pages/PageNotFound'
 import Home from './Home'
+import Logo from './components/Navbar/Logo'
 
 
 function App() {
   const responseCode = useSelector((state) => state.questions.responseCode);
   return (
     <>
+      <Logo/>
       {
         responseCode === 1 ? (<Loader />) : (
           responseCode === 0  ? (

@@ -1,3 +1,57 @@
+.overview-of-question{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    width: 500px;
+    margin: 15px;
+    padding: 30px;
+    background-color: rgba(126, 90, 90, 0.404);
+    border-radius: 12px;
+}
+
 .question-number{
-    
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.visited{
+    background-color: darkgreen;
+}
+
+.attempted{
+    background-color: red;
+}
+
+.learning-symbols{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+
+.learning-symbols button{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #1A1A24;
+}
+
+.learningAttempted button{
+    background-color: red;
+}
+
+.learningVisited button{
+    background-color: darkgreen;
+}
+.overview-coloumn{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 20px;
+  
 }

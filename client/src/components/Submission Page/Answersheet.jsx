@@ -1,27 +1,23 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import UserPerformance from './UserPerformance';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 function Answersheet() {
+  const [correctAnswer, setCorrectAnswer] = useState(0);
+
   const questionsData = useSelector((state) => state.questions);
   const currentQuestion = useSelector((state) => state.currentQuestion);
-  let questionsAttempted = 0, correctAnswer = 0;
-  let wrongAnswer =  questionsData.totalQuestions - correctAnswer;
   useEffect(() => {
       for(let i = 0; i<questionsData.totalQuestions; i++){
           const userAnswer = questionsData.userData?.[i];
           if((userAnswer !== undefined) && (userAnswer === questionsData.data[i].correct_answer)){
-            correctAnswer++;
+            setCorrectAnswer(correctAnswer +1);
             console.log("correct", correctAnswer);
-          }
-          if(questionsData.visitedQuestionList[i]){
-            questionsAttempted++;
-            console.log("Incorrect: ", questionsAttempted);
           }
       }
 
-  }, [])
+  }, [currentQuestion])
   
 
   return (
@@ -34,8 +30,7 @@ function Answersheet() {
                 <p>{`User Email: ${questionsData.userEmail}`}</p>
                 <p>{`Total Questions: ${questionsData.totalQuestions}`}</p>
                 <p>{`Correct Answers: ${correctAnswer}`}</p>
-                <p>{`Wrong Answers: ${wrongAnswer}`}</p>
-                <p>{`Questions Attempted: ${questionsAttempted}`}</p>
+                <p>{`Wrong Answers: ${questionsData.totalQuestions - correctAnswer}`}</p>
                 <NavLink to ="/"><button >Try Again</button></NavLink>
               </div>
             )}

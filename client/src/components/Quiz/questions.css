@@ -11,7 +11,7 @@
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
     font-size: 17px;
-    transition: all .25s linear;
+    transition: all .15s linear;
 }
 
 .btn:hover:not([disabled]){
@@ -29,3 +29,39 @@
     color: #fff;
     border-color: #e36060;
 }
+
+.quiz-question{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px;
+    height: 500px;
+    width: 500px;
+    padding: 30px;
+    background-color: white;
+    color: black;
+    border-radius: 12px;
+}
+
+.quiz-category{
+    width: fit-content;
+    font-weight: 600;
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    color:brown;
+}
+
+.div-quiz-category{
+    display: flex;
+    gap: 20px;
+
+}
+
+.quiz-question-value span{
+    font-weight: 600;
+}
+
+.quiz-question-value{
+    padding: 4px;
+}
+
