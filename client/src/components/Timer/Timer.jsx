@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import './timer.css'
 function Timer() {
   //1800
   const [timeLeft, setTimeLeft] = useState(1800); // 30 minutes in seconds
@@ -20,7 +20,7 @@ function Timer() {
   }, [timeLeft, navigate]);
 
   return (
-    <div>
+    <div className='timer-parent-div'>
       Time Remaining: {formatTime(timeLeft)}
     </div>
   );

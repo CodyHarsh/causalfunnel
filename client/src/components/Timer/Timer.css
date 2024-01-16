@@ -1,6 +1,13 @@
+.timer-parent-div{
+    background-color: rgb(238, 204, 204);
+    color: rgb(193, 144, 144);
+    font-weight: bold;
+    padding: 10px 0px;
+    border-radius: 20px;
+}
 .timer {
-    --primary-color: #333; // Adjust to your theme's primary color
-    --accent-color: #f00; // Adjust to your theme's accent color
+    --primary-color: #333; 
+    --accent-color: #f00; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,4 +49,5 @@
     background-color: var(--accent-color);
     color: #fff;
   }
+  
   

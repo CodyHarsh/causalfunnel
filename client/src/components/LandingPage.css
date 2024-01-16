@@ -1,0 +1,9 @@
+.form-email-div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#email{
+    height: 30px;
+}

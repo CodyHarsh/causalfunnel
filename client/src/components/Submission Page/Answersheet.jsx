@@ -10,7 +10,7 @@ function Answersheet() {
   const currentQuestion = useSelector((state) => state.currentQuestion);
   useEffect(() => {
       for(let i = 0; i<questionsData.totalQuestions; i++){
-          const userAnswer = questionsData.userData?.[i];
+          const userAnswer = questionsData.userData[i];
           if((userAnswer !== undefined) && (userAnswer === questionsData.data[i].correct_answer)){
             setCorrectAnswer(correctAnswer +1);
             console.log("correct", correctAnswer);
@@ -32,11 +32,12 @@ function Answersheet() {
                 <p>{`Correct Answers: ${correctAnswer}`}</p>
                 <p>{`Wrong Answers: ${questionsData.totalQuestions - correctAnswer}`}</p>
                 <NavLink to ="/"><button >Try Again</button></NavLink>
+               <UserPerformance />
               </div>
             )}
 
         </div>
-       
+      
     </div>
   )
 }

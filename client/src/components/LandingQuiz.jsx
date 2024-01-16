@@ -5,6 +5,7 @@ import NextAndPrevious from './Navigation/NextAndPrevious';
 import { setUserEmail } from '../redux-store/slices/fetchQuestions';
 import OverviewOfQuestions from './Overview/OverviewOfQuestions';
 import Timer from './Timer/Timer';
+import './LandingPage.css';
 
 function LandingQuiz() {
   const dispactch = useDispatch();
@@ -21,7 +22,8 @@ function LandingQuiz() {
     <div>
       {!showQuiz && (
         <form onSubmit={handleSubmit}>
-          <label htmlFor="email">Email:</label>
+          <div className='form-email-div'>
+          <label htmlFor="email">Write Your Email to start the quiz: </label>
           <input
             type="email"
             id="email"
@@ -29,7 +31,8 @@ function LandingQuiz() {
             placeholder='johndoe@gmail.com'
             required
           />
-          <button type="submit">Submit</button>
+          <button type="submit">Start Quiz</button>
+          </div>
         </form>
       )}
       {showQuiz && (

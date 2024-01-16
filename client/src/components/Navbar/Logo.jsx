@@ -2,8 +2,8 @@ import React from 'react'
 import './logo.css'
 function Logo() {
   return (
-    <div>
-        <div className='navbar-logo'>To Do Quiz</div>
+    <div className='nav'>
+        <div className='navbar-logo'>Quiz Website</div>
     </div>
   )
 }
