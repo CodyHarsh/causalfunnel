@@ -20,7 +20,7 @@ function Answersheet() {
       if((userAnswer !== undefined) && (userAnswer === questionsData.data[i].correct_answer)){
         // setCorrectAnswer(correctAnswer +1);
         correctAnswer++;
-        console.log("correct", correctAnswer);
+        
       }
     }
   }

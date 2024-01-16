@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import './questions.css'
 import { updateTheVisited, updateUserAnswers } from '../../redux-store/slices/fetchQuestions';
-
+import parse from 'html-react-parser'
 
 function Questions() {
 
@@ -12,7 +12,6 @@ function Questions() {
   const item =  questions.data[currenQuestion];
   const userSelectedOption = questions.userData[currenQuestion];
   const options = questions.options[currenQuestion];
-  console.log(questions);
   const [selectedOption, setSelectedOption] = useState(userSelectedOption);
 
   useEffect(() => {
@@ -36,17 +35,17 @@ function Questions() {
   return (
     <div className='quiz-question'>
              <div className='div-quiz-category'>
-                <p className='quiz-category'>{item.category}</p>
+                <p className='quiz-category'>{parse(item.category)}</p>
                 <p className='quiz-category '><span>Difficulty: </span> {item.difficulty}</p>
              </div>
             
-            <p className='quiz-question-value'><span>Q{currenQuestion+1}: </span> {item.question}</p>
+            <p className='quiz-question-value'><span>Q{currenQuestion+1}: </span> {parse(item.question)}</p>
             {
               options.map((val, index) => (
                 <div key={index}>
                   <button className={
                     `btn ${userSelectedOption !== undefined && userSelectedOption === val ? ('correct'): ('')}`
-                  } onClick={handleOptions} value={val}>{val}</button>
+                  } onClick={handleOptions} value={val}>{parse(val)}</button>
                 </div>
               ))
             }

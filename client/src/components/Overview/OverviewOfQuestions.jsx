@@ -11,7 +11,6 @@ function OverviewOfQuestions() {
 
   function handleThePage(e){
     const clickedQuestionIndex = parseInt(e.target.value);
-    console.log(clickedQuestionIndex)
     dispactch(incrementByAmount({clickedQuestionIndex}))
   }
   return (
