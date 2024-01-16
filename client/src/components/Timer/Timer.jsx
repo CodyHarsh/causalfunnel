@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './timer.css'
+import './Timer.css'
 function Timer() {
   //1800
   const [timeLeft, setTimeLeft] = useState(1800); // 30 minutes in seconds

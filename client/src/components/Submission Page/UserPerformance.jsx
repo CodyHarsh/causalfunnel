@@ -6,11 +6,13 @@ function UserPerformance() {
   const questionsData = useSelector((state) => (state.questions));
   console.log("Questins Data: ", questionsData)
   const apiData = questionsData.data;
-  const userChoosenOption = questionsData.userData;
-  const correctOption = questionsData.data.results;
   const userSelectedOption = questionsData.userData;
   const options =questionsData.options;
-  console.log(options)
+
+  //Converts html code to regular characters
+  function removeCharacters(question){
+    return question.replace(/(&quot\;)/g, "\"").replace(/(&rsquo\;)/g, "\"").replace(/(&#039\;)/g, "\'").replace(/(&amp\;)/g, "\"");
+  }
   return (
     <div>
         {
@@ -18,8 +20,7 @@ function UserPerformance() {
                  { 
                     return ( 
                         <div key={index} className='submit-quiz-parent'>
-                            <p className=''>Category: {item.category}</p>
-                            <p>Q{index+1}: {item.question}</p>
+                            <p><span style={{fontWeight:'600'}}>Q{index+1}:</span> {removeCharacters(item.question)}</p>
                             {
                                 options[index].map((val, ind) => (
                                     <div key={ind}>
