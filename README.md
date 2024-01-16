@@ -1,3 +1,10 @@
+## Screenshot of Website:
+<img width="960" alt="Screenshot 2024-01-16 152421" src="https://github.com/CodyHarsh/causalfunnel/assets/71979122/33009d32-347e-40a2-8de3-71c0d2b8ee29">
+<img width="943" alt="Screenshot 2024-01-16 152444" src="https://github.com/CodyHarsh/causalfunnel/assets/71979122/f7853065-66b6-4de7-abd8-39cd7424bbf0">
+<img width="959" alt="Screenshot 2024-01-16 152503" src="https://github.com/CodyHarsh/causalfunnel/assets/71979122/03c10c82-fb30-4bad-9d5b-ac8449404c0f">
+<img width="960" alt="Screenshot 2024-01-16 152520" src="https://github.com/CodyHarsh/causalfunnel/assets/71979122/135645ba-d8d9-4cb7-9ccb-749ecafc194d">
+<img width="960" alt="Screenshot 2024-01-16 152608" src="https://github.com/CodyHarsh/causalfunnel/assets/71979122/53de0cbc-696c-4ef0-9342-23d8d404d7c1">
+
 
 ## Installation of Project:
 **Here are the steps a user would follow to download the code from GitHub and run it on your machine:**  
@@ -41,9 +48,4 @@
  1. I am assuming that when you click on try again button your current ticked option will be visible on quiz pannel and need to write email id again.
  2. You have to write the email id when you click on try again.
  
-## Screenshot of Website:
-<img width="960" alt="Screenshot 2024-01-16 152421" src="https://github.com/CodyHarsh/causalfunnel/assets/71979122/33009d32-347e-40a2-8de3-71c0d2b8ee29">
-<img width="943" alt="Screenshot 2024-01-16 152444" src="https://github.com/CodyHarsh/causalfunnel/assets/71979122/f7853065-66b6-4de7-abd8-39cd7424bbf0">
-<img width="959" alt="Screenshot 2024-01-16 152503" src="https://github.com/CodyHarsh/causalfunnel/assets/71979122/03c10c82-fb30-4bad-9d5b-ac8449404c0f">
-<img width="960" alt="Screenshot 2024-01-16 152520" src="https://github.com/CodyHarsh/causalfunnel/assets/71979122/135645ba-d8d9-4cb7-9ccb-749ecafc194d">
-<img width="960" alt="Screenshot 2024-01-16 152608" src="https://github.com/CodyHarsh/causalfunnel/assets/71979122/53de0cbc-696c-4ef0-9342-23d8d404d7c1">
+
