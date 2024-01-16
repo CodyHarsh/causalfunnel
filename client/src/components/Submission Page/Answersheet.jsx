@@ -4,21 +4,27 @@ import UserPerformance from './UserPerformance';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 function Answersheet() {
-  const [correctAnswer, setCorrectAnswer] = useState(0);
+  // const [correctAnswer, setCorrectAnswer] = useState(0);
 
   const questionsData = useSelector((state) => state.questions);
   const currentQuestion = useSelector((state) => state.currentQuestion);
-  useEffect(() => {
-      for(let i = 0; i<questionsData.totalQuestions; i++){
-          const userAnswer = questionsData.userData[i];
-          if((userAnswer !== undefined) && (userAnswer === questionsData.data[i].correct_answer)){
-            setCorrectAnswer(correctAnswer +1);
-            console.log("correct", correctAnswer);
-          }
-      }
+  // useEffect(() => {
+      
 
-  }, [currentQuestion])
+  // }, [currentQuestion])
   
+  let correctAnswer = 0;
+  function checking(){
+    for(let i = 0; i<questionsData.totalQuestions; i++){
+      const userAnswer = questionsData.userData[i];
+      if((userAnswer !== undefined) && (userAnswer === questionsData.data[i].correct_answer)){
+        // setCorrectAnswer(correctAnswer +1);
+        correctAnswer++;
+        console.log("correct", correctAnswer);
+      }
+    }
+  }
+  checking();
 
   return (
     <div>
