@@ -54,7 +54,7 @@ const fetchQuestion = createSlice({
                 state.data = actions.payload.results;
                 let sizeOfData = actions.payload.results.length;
                 state.totalQuestions = sizeOfData;
-                state.userData = new Array(sizeOfData);
+                state.userData = new Array(sizeOfData).fill(undefined);
                 state.visitedQuestionList = new Array(sizeOfData).fill(0);
 
                 for(let i = 0; i<sizeOfData; i++){
