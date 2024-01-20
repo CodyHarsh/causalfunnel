@@ -30,10 +30,10 @@ function Questions() {
       setSelectedOption(userOption);
       dispatch(updateUserAnswers({ currenQuestion, userOption }));
     }
-    //dispactch(updateUserAnswers({currenQuestion, userOption}));
   }
   return (
     <div className='quiz-question'>
+               
              <div className='div-quiz-category'>
                 <p className='quiz-category'>{parse(item.category)}</p>
                 <p className='quiz-category '><span>Difficulty: </span> {item.difficulty}</p>
